@@ -194,9 +194,11 @@ def main():
     print(f"🔃 Started creating the video...")
 
     # ----- Paths -----
-    video_path = "/mnt/c/Users/dorgoz/Downloads/minecraftparrkour_cropped.mp4"
+    ################ CHANGE THESE!!!! ##################
+    video_path = "/mnt/c/Users/username/Downloads/minecraftparrkour_cropped.mp4" 
+    bg_music_path = "/mnt/c/Users/username/Downloads/Alla-Turca.mp3"
+    ## Don't need to change these, but you do you ##
     tts_audio_path = output_path
-    bg_music_path = "/mnt/c/Users/dorgoz/Downloads/Alla-Turca.mp3"
     output_video_path = save_folder_path+"/Wiki_Brainrot_"+title.replace(' ','_')+"_video.mp4"
     transcript_text = text
 
@@ -205,7 +207,7 @@ def main():
     tts_duration = tts_audio.duration
 
     # Load video with a random offset for variation
-    # Ensure we don’t exceed total video length
+    # Ensure you don’t exceed total video length
     video_duration = VideoFileClip(video_path).duration
     max_offset = max(0, video_duration - tts_duration, 0)
     offset = random.uniform(0, min(240, max_offset))
@@ -215,16 +217,12 @@ def main():
 
     # ----- Mix TTS and background music -----
     combined_audio = CompositeAudioClip([music, tts_audio])
-    # video = mp.vfx.set_audio(video,combined_audio)
     video = video.set_audio(combined_audio)
 
 
     # ----- Create timed text overlays -----
-    # target_width = video.w
-    # target_height = video.h
     chunk_size = 6  # words per chunk
     words = transcript_text.split()
-    # timing_plan = build_timing_plan(words, tts_duration)
     timing_plan = build_timing_plan_with_whisper(tts_audio_path, transcript_text)
     words = [item["word"] for item in timing_plan]
 
@@ -253,7 +251,7 @@ def main():
     final.write_videofile(output_video_path, codec="libx264", audio_codec="aac", fps=30)
     print(f"✅ Video saved at: {output_video_path}")
 
-
+# This is a function to call from a script that creates a batch of videos from a URL list
 def generate_video_from_text(intro_title, intro_text):
     title = intro_title
     text = intro_text
@@ -294,9 +292,11 @@ def generate_video_from_text(intro_title, intro_text):
     print(f"🔃 Started creating the video...")
 
     # ----- Paths -----
-    video_path = "/mnt/c/Users/dorgoz/Downloads/minecraftparrkour_cropped.mp4"
+    ################ CHANGE THESE!!!! ##################
+    video_path = "/mnt/c/Users/username/Downloads/minecraftparrkour_cropped.mp4" 
+    bg_music_path = "/mnt/c/Users/username/Downloads/Alla-Turca.mp3"
+    ## Don't need to change these, but you do you ##
     tts_audio_path = output_path
-    bg_music_path = "/mnt/c/Users/dorgoz/Downloads/Alla-Turca.mp3"
     output_video_path = save_folder_path+"/Wiki_Brainrot_"+title.replace(' ','_')+"_video.mp4"
     transcript_text = text
 
@@ -320,8 +320,6 @@ def generate_video_from_text(intro_title, intro_text):
 
 
     # ----- Create timed text overlays -----
-    # target_width = video.w
-    # target_height = video.h
     chunk_size = 6  # words per chunk
     words = transcript_text.split()
     # timing_plan = build_timing_plan(words, tts_duration)
