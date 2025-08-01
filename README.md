@@ -6,7 +6,7 @@ It then loads a long video, chops it to the length of the audio file, adds the t
 
 TLDR: Free TikTok Brainrot Generator
 
-|![[exp1.png|150]]|![[exp2.png|150]]|![[exp3.png|150]]
+|![[/readmeimages/exp1.png|150]]|![[/readmeimages/exp2.png|150]]|![[/readmeimages/exp3.png|150]]
 
 --- 
 
@@ -71,12 +71,10 @@ source tts_env/bin/activate
 ```
 - Step 3: Make sure the python script is at this directory
 - Step 4: Set the paths of your resources (video and bg music) in the python script
-- Step 5: Run python script
+- Step 5: Run python script to generate video from random article
 ```bash
 # run python script
-python3 wikitts.py
-# latest version!!
-python3 movietts_v2.py
+python3 movietts.py
 ```
 
 ## ToDo
