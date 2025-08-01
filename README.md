@@ -76,7 +76,10 @@ source tts_env/bin/activate
 # run python script
 python3 movietts.py
 ```
-
+- Step 6: Run the batch generation scipt that loads a text file of URLs and generates videos for all URLs in the list
+```bash
+python3 generate_from_urls.py EXAMPLE_URL_LIST.txt
+```
 ## ToDo
 
 - [ ] Web-based GUI - maybe with streamlit?
