@@ -305,7 +305,7 @@ def generate_video_from_text(intro_title, intro_text):
     tts_duration = tts_audio.duration
 
     # Load video with a random offset for variation
-    # Ensure we don’t exceed total video length
+    # Ensure you don’t exceed total video length
     video_duration = VideoFileClip(video_path).duration
     max_offset = max(0, video_duration - tts_duration, 0)
     offset = random.uniform(0, min(240, max_offset))
