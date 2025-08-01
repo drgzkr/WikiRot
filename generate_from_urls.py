@@ -4,7 +4,7 @@ import argparse
 from urllib.parse import unquote, urlparse
 from pathlib import Path
 import wikipedia
-from movietts_v2 import generate_video_from_text  # Make sure this is properly defined
+from movietts import generate_video_from_text  
 
 def url_to_title(url):
     """
