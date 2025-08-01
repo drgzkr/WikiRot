@@ -6,7 +6,7 @@ It then loads a long video, chops it to the length of the audio file, adds the t
 
 TLDR: Free TikTok Brainrot Generator
 
-|![[/readmeimages/exp1.png|150]]|![[/readmeimages/exp2.png|150]]|![[/readmeimages/exp3.png|150]]
+| <img src="/readmeimages/exp1.png" width="150"> | <img src="/readmeimages/exp2.png" width="150"> | <img src="/readmeimages/exp3.png" width="150"> |
 
 --- 
 
